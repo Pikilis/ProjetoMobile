@@ -5,7 +5,7 @@ import 'cadastro_usuario_screen.dart';
 import 'cadastro_cliente_screen.dart'; // Exemplo de próxima navegação
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();

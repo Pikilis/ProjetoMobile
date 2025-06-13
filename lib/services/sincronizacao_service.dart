@@ -1,7 +1,6 @@
 import '../repositories/cliente_repository.dart';
 import '../repositories/produto_repository.dart';
 import '../repositories/usuario_repository.dart';
-import '../repositories/pedido_repository.dart';
 import '../models/cliente_model.dart';
 import '../models/produto_model.dart';
 import '../models/usuario_model.dart';

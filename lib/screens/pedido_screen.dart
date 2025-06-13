@@ -20,8 +20,8 @@ class _PedidoScreenState extends State<PedidoScreen> {
   final _valorItem = TextEditingController();
   final _valorPagamento = TextEditingController();
 
-  List<PedidoItemModel> _itens = [];
-  List<PedidoPagamentoModel> _pagamentos = [];
+  final List<PedidoItemModel> _itens = [];
+  final List<PedidoPagamentoModel> _pagamentos = [];
 
   double get totalItens =>
       _itens.fold(0.0, (sum, item) => sum + item.totalItem);
