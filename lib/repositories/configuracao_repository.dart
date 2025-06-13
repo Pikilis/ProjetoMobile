@@ -9,11 +9,13 @@ class ConfiguracaoRepository {
   }
 
   Future<ConfiguracaoModel?> getConfiguracao() async {
-    final db = await AppDatabase.instance;
-    final result = await db.query('configuracao');
-    if (result.isNotEmpty) {
-      return ConfiguracaoModel.fromJson(result.first);
+    try {
+      final db = await AppDatabase.instance;
+      final result = await db.query('configuracao');
+      return result.isNotEmpty ? ConfiguracaoModel.fromJson(result.first) : null;
+    } catch (e) {
+      print('Erro ao buscar configuração: $e');
+      return null;
     }
-    return null;
   }
 }

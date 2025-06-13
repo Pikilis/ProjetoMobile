@@ -47,18 +47,18 @@ class AppDatabase {
 
     await db.execute('''
       CREATE TABLE produtos (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    unidade TEXT NOT NULL,
-    qtdEstoque REAL NOT NULL,
-    precoVenda REAL NOT NULL,
-    status INTEGER NOT NULL,
-    custo REAL,
-    codigoBarra TEXT,
-    ultimaAlteracao TEXT,
-    excluido INTEGER DEFAULT 0
-  );
-    ''');
+        id INTEGER PRIMARY KEY,
+        nome TEXT NOT NULL,
+        unidade TEXT NOT NULL,
+        qtdEstoque REAL NOT NULL,
+        precoVenda REAL NOT NULL,
+        status INTEGER NOT NULL,
+        custo REAL,
+        codigoBarra TEXT,
+        ultimaAlteracao TEXT,
+        excluido INTEGER DEFAULT 0
+      );
+        ''');
 
     await db.execute('''
       CREATE TABLE pedidos (
